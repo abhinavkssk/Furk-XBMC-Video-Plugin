@@ -31,7 +31,8 @@ except:
 	# pre-frodo and python 2.4
 	import simplejson as json
 	from cgi import parse_qs
-
+import ssl
+ssl._create_default_https_context = ssl._create_unverified_context
 # Plugin constants
 __settings__ = xbmcaddon.Addon(id='plugin.video.furk')
 __plugin__ = 'Furk.net'
